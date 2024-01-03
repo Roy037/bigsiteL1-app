@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(137, 137, 137);
+}
+header {
+    background-color: aqua;
+    color: brown;
+}
+footer {
+    background-color: blueviolet;
+}
+h1 {
+    color: red;
+}
+
