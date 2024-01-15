@@ -11,7 +11,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <title>Document</title>
-   
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
