@@ -19,5 +19,4 @@ class Uppercase implements ValidationRule
     {
         return 'the atttibuild  sdnsanajdnajd';
     }
-}
-git initgit init
+} 

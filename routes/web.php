@@ -5,8 +5,8 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/posts', [PostsController::class, 'index']);
 Route::resource('cars', CarsController::class);
@@ -41,6 +41,36 @@ Route::get('/products/{productsName}/{id}', [
 ]);
 
 
+
+
+
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
+    /**
+     * Home Routes
+     */
+    Route::get('/', 'HomeController@index')->name('home.index');
+
+    Route::group(['middleware' => ['guest']], function () {
+        /**
+         * Register Routes
+         */
+        Route::get('/register', 'RegisterController@show')->name('register.show');
+        Route::post('/register', 'RegisterController@register')->name('register.perform');
+
+        /**
+         * Login Routes
+         */
+        Route::get('/login', 'LoginController@show')->name('login.show');
+        Route::post('/login', 'LoginController@login')->name('login.perform');
+    });
+
+    Route::group(['middleware' => ['auth']], function () {
+        /**
+         * Logout Routes
+         */
+        Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+    });
+});
 
 
 

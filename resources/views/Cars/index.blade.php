@@ -9,7 +9,7 @@
             <div class="ms-2 me-auto">
                 <div class="fw-bold">
                     <a href="/cars/{{ $car->id }}">
-                     {{ $car->name }}
+                        {{ $car->name }}
                 </div>
                 {{ $car->description }}
             </div>

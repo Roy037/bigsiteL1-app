@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,4 +32,4 @@
     <a href="{{ route('products') }}">link to products</a>
 </body>
 
-</html>
+</html> --}}
